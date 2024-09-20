@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EditFlightView: View {
-    @State var flight: Flight
+    @State var flight: Flight = .example
 
     let flightStatuses = ["On Time", "Delayed", "Cancelled", "Boarding"]
 
@@ -18,8 +18,8 @@ struct EditFlightView: View {
     var updateFlightClosure: (Flight) -> Void
     
     init(flight: Flight, updateFlightClosure: @escaping (Flight) -> Void) {
-        self.flight = flight
         self.updateFlightClosure = updateFlightClosure
+        self.flight = flight
     }
 
     var body: some View {
