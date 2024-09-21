@@ -9,7 +9,8 @@ import Foundation
 
 extension FlightsManager {
     func updateFlight(flight: Flight) {
-        let index = flights.firstIndex { $0.id == flight.id } // Es el indice de donde se encuentra el vuelo que se quiere actualizar
+        let index = flights.firstIndex { $0.id == flight.id }! // Es el indice de donde se encuentra el vuelo que se quiere actualizar
         // Recuerde que para hacer llamado a los vuelos use el parametro "flights"
+        flights[index] = flight
     }
 }
