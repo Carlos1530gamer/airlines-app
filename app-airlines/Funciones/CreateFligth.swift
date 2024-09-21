@@ -10,5 +10,7 @@ import Foundation
 extension FlightsManager {
     func createFlight(flight: Flight) {
         // Recuerde que para hacer llamado a los vuelos use el parametro "flights"
+        //flights
+        flights.append(flight)
     }
 }
