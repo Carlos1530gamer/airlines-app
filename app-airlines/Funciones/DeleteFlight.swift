@@ -10,5 +10,6 @@ import Foundation
 extension FlightsManager {
     func deleteFlight(index: Int) {
         // Recuerde que para hacer llamado a los vuelos use el parametro "flights"
+        flights.remove(at: index)
     }
 }
